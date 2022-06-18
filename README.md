@@ -1,7 +1,7 @@
-import os, time
-from sys import stdout
+# Este script instala el bspwm, sxhkd, polybar y alguna cosilla más, sacado de los tutoriales de s4vitar, pero con ligeras modificaciones.
 
-def install():
+#Pasos a seguir:
+
 # Actualizando sistema
 
 	print("\n[+] Primero actualizamos el sistema\n")
@@ -144,12 +144,3 @@ def install():
 
 
 	print("\n[+] TODOOO INSTALADO!!!")
-
-if __name__ == '__main__':
-	id = os.getuid()
-    
-	if id == 0:
-    print("\n[!] No hay que ser root para ejecutar la herramienta")
-  else:
-    install()
-
