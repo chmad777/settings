@@ -1,7 +1,7 @@
-import os, time
-from sys import stdout
+# Este script instala el bspwm, sxhkd, polybar y alguna cosilla más, sacado de los tutoriales de s4vitar, pero con ligeras modificaciones.
 
-def install():
+#Pasos a seguir:
+
 # Actualizando sistema
 
 	print("\n[+] Primero actualizamos el sistema\n")
