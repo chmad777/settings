@@ -78,8 +78,9 @@ def install():
 	os.system("mkdir ~/.config/sxhkd")
 	time.sleep(1)
 	os.system("cp /opt/backups/config/bspwm/bspwmrc ~/.config/bspwm/")
-	os.system("cp /opt/backups/config/sxhkd/sxhkdrc ~/.config/sxhkd/")
+	os.system("cp /opt/backups/config/sxhkd/* -R ~/.config/sxhkd/")
 	os.system("chmod +x ~/.config/bspwm/bspwmrc")
+	os.system("chmod +x ~/.config/sxhkd/scripts/resize.sh")
 
 	print("\n[!] Archivos de configuracion copiados\n")
 
