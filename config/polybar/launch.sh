@@ -14,16 +14,16 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar logo -c ~/.config/polybar/current.ini &
 polybar date -c ~/.config/polybar/current.ini &
 polybar ip -c ~/.config/polybar/current.ini &
-polybar HTB -c ~/.config/polybar/current.ini &
-polybar target -c ~/.config/polybar/current.ini &
+#polybar HTB -c ~/.config/polybar/current.ini &
+#polybar target -c ~/.config/polybar/current.ini &
 
 
 ## Right bar
 polybar power_off -c ~/.config/polybar/current.ini &
 polybar battery -c ~/.config/polybar/current.ini &
 polybar audio -c ~/.config/polybar/current.ini &
-polybar files  -c ~/.config/polybar/current.ini &
-polybar web  -c ~/.config/polybar/current.ini &
+#polybar files  -c ~/.config/polybar/current.ini &
+#polybar web  -c ~/.config/polybar/current.ini &
 
 
 ## Center bar
