@@ -1,5 +1,6 @@
 #! /bin/sh
 
+# inicia el sxhkd para los shortcuts
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -16,10 +17,22 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+# inicia la polybar
+~/.config/polybar/.launch.sh
+
+# aplica el fondo de pantall
 feh --bg-fill ~/.wallpapers/wallpaper.jpeg
+
+
 xsetroot -cursor_name left_ptr &
+
+# para la compatibilidad con java
 wmname LG3D &
-~/.config/polybar/./launch.sh
+
+# para que el raton marque la pantalla focus
 bspc config focus_follows_pointer true
-bspc config border_width 0
+
+# inicia el picom en modo experimental y pone los bordes de ventana redondeados
 picom --experimental-backends &
+bspc config border_width 0
