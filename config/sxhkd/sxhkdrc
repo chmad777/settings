@@ -117,3 +117,11 @@ super + ctrl + {Left,Down,Up,Right}
 # Custom move/resize
 alt + super + {Left,Down,Up,Right}
 	/home/s4vitar/.config/sxhkd/scripts/resize.sh {west,south,north,east}
+
+#-----------------------------------------------------------------------;;
+# 7 				BLOQUEO PANTALLA			;;
+#-----------------------------------------------------------------------;;
+
+# bloqueo de pantall
+super + l
+	GLITCHICON=/opt/glitchlock/stop.png /opt/glitchlock
