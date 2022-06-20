@@ -19,7 +19,7 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 # inicia la polybar
-~/.config/polybar/.launch.sh
+~/.config/polybar/launch.sh
 
 # aplica el fondo de pantall
 feh --bg-fill ~/.wallpapers/wallpaper.jpeg
