@@ -116,4 +116,4 @@ super + ctrl + {Left,Down,Up,Right}
 
 # Custom move/resize
 alt + super + {Left,Down,Up,Right}
-	/home/s4vitar/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
+	/home/s4vitar/.config/sxhkd/scripts/resize.sh {west,south,north,east}
