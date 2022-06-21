@@ -75,9 +75,9 @@ def install():
 	time.sleep(1)
 	os.system("sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y")
 	time.sleep(1)
-	os.system("sudo apt install acpi make make-guile gcc shred scrub gnome-terminal caja zsh -y")
+	os.system("sudo apt install acpi make make-guile gcc scrub gnome-terminal caja zsh -y")
 
-	os.system("sudo apt autoremove && sudo apt update && sudo apt upgrade -y")
+	os.system("sudo apt autoremove -y && sudo apt update && sudo apt upgrade -y")
 	green()
 	print("\n[!] Requerimientos instalados correctamente\n")
 	time.sleep(2)
