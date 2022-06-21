@@ -211,8 +211,6 @@ def install():
 	os.system("cp /opt/settings/config_files/powerlevel10k/p10k.zsh ~/.p10k.zsh")
 	os.system("sudo cp /opt/settings/config_files/powerlevel10k/zshrc.r /root/.zshrc && sudo chown root:root /root/.zshrc")
 	os.system("sudo cp /opt/settings/config_files/powerlevel10k/p10k.zsh.r /root/.p10k.zsh && sudo chown root:root /root/.p10k.zsh")
-	os.system("sudo cp /opt/settings/zsh-plugins /usr/share -R")
-	os.system("sudo chown $(cat /etc/passwd | grep 1000 | awk '{print $1}' FS=':'):$(cat /etc/passwd | grep 1000 | awk '{print $1}' FS=':') /usr/share/zsh-plugins -v")	
 	green()
 	print("\n[!]Powerlevel10k instalado correctamente\n")
 
