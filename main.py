@@ -53,15 +53,14 @@ def menu():
 
 def install():
 # Actualizando sistema
-	white()
+	red()
 	print("\n[+] Primero actualizamos el sistema\n")
-	
+	white()
 	time.sleep(1)
-
+	
 	os.system("sudo apt update && sudo apt upgrade -y")
-
+	green()
 	print("\n[!] Sistema actualizado\n")
-
 	time.sleep(2)
 
 # Instalando Dependencias
@@ -74,11 +73,10 @@ def install():
 	os.system("sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y")
 	os.system("sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y")
 	os.system("sudo apt install acpi make make-guile gcc shred scrub gnome-terminal caja zsh -y")
-	
+
 	os.system("sudo apt autoremove && sudo apt update && sudo apt upgrade -y")
 	green()
 	print("\n[!] Requerimientos instalados correctamente\n")
-
 	time.sleep(2)
 
 # Instalando bspwm	
@@ -88,7 +86,7 @@ def install():
 	time.sleep(1)
 
 	os.system("cd /opt/settings/repositorios/bspwm && make && sudo make install")
-	os.system("sudo apt install bspwm")
+	os.system("sudo apt install bspwm -y")
 	green()
 	print("\n[!] Bspwm instalado\n")
 
@@ -103,7 +101,6 @@ def install():
 	os.system("cd /opt/settings/repositorios/sxhkd && make && sudo make install")
 	green()
 	print("\n[!] sxhkd instalado\n")
-
 	time.sleep(2)
 
 # Copiando archivos de configuracion de bspwm & sxhkd
@@ -119,9 +116,9 @@ def install():
 	os.system("cp /opt/settings/config_files/sxhkd/* -R ~/.config/sxhkd/")
 	os.system("chmod +x ~/.config/bspwm/bspwmrc")
 	os.system("chmod +x ~/.config/sxhkd/scripts/resize.sh")
+	
 	green()
 	print("\n[!] Archivos de configuracion copiados\n")
-
 	time.sleep(2)
 
 # Instalando polybar
@@ -130,10 +127,8 @@ def install():
 	white()
 	time.sleep(1)
 	
-	os.system("cd /opt/settings/repositorios/polybar && git submodule update --init --recursive ")
-	os.system("mkdir /opt/settings/repositorios/polybar/build")
-	time.sleep(1)
-	os.system("cd /opt/settings/repositorios/polybar/build && cmake .. && make -j$(nproc) && sudo make install")
+	os.system("cd /opt/settings/repositorios && git clone --recursive https://github.com/polybar/polybar")
+	os.system("mkdir /opt/settings/repositorios/polybar/build && cd /opt/settings/repositorios/polybar/build && cmake .. && make -j$(nproc) && sudo make install")
 	green()
 	print("\n[!] Polybar instalada correctamente\n")
 
@@ -145,10 +140,9 @@ def install():
 	white()
 	time.sleep(1)
 
-	os.system("cp /opt/settings/config_files/polybar ~/.config/ -r")
+	os.system("cp /opt/settings/config_files/polybar ~/.config/ -r && chmod +x ~/.config/polybar/launch.sh")
 	green()
 	print("\n[!] Archivos de configuracion copiados\n")
-
 	time.sleep(2)
 
 # Instalando picom
