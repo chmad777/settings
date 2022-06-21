@@ -148,7 +148,7 @@ def install():
 	white()
 	time.sleep(1)
 
-	os.system("cp /opt/settings/config_files/polybar ~/.config/ -r && chmod +x ~/.config/polybar/launch.sh && chmod +x ~/.config/polybar/scripts/*")
+	os.system("cp /opt/settings/config_files/polybar ~/.config/ -r && chmod +x ~/.config/polybar/launch.sh && chmod +x ~/.config/polybar/scripts/* && chown root:root /usr/local/share/zsh/site-functions/_bspc")
 	green()
 	print("\n[!] Archivos de configuracion copiados\n")
 	time.sleep(2)
