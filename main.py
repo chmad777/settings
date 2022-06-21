@@ -70,8 +70,11 @@ def install():
 	time.sleep(1)
 
 	os.system("sudo apt install build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y")
+	time.sleep(1)
 	os.system("sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y")
+	time.sleep(1)
 	os.system("sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y")
+	time.sleep(1)
 	os.system("sudo apt install acpi make make-guile gcc shred scrub gnome-terminal caja zsh -y")
 
 	os.system("sudo apt autoremove && sudo apt update && sudo apt upgrade -y")
@@ -140,7 +143,7 @@ def install():
 	white()
 	time.sleep(1)
 
-	os.system("cp /opt/settings/config_files/polybar ~/.config/ -r && chmod +x ~/.config/polybar/launch.sh")
+	os.system("cp /opt/settings/config_files/polybar ~/.config/ -r && chmod +x ~/.config/polybar/launch.sh && chmod +x ~/.config/`polybar/scripts/*")
 	green()
 	print("\n[!] Archivos de configuracion copiados\n")
 	time.sleep(2)
@@ -195,7 +198,7 @@ def install():
 	os.system("sudo apt install feh -y")
 	os.system("mkdir ~/.wallpapers && cd ~/.wallpapers && cp /opt/settings/wallpapers/wallpaper.jpeg .")
 	time.sleep(1)
-	os.system("sudo cp /opt/settings/wallpapers/background /usr/share/descktop-base/kali-theme/login")
+	os.system("sudo cp /opt/settings/wallpapers/background /usr/share/desktop-base/kali-theme/login")
 	green()
 	print("\n[!]Feh instaladas correctamente\n")
 
