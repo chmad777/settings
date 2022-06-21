@@ -282,8 +282,6 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-source /usr/share/zsh-plugins/sudo.plugin.zsh
-
 # enable powerlevel10k
 source /opt/settings/repositorios/powerlevel10k/powerlevel10k.zsh-theme
 
