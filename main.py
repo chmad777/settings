@@ -73,7 +73,7 @@ def install():
 	os.system("sudo apt install build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev -y")
 	os.system("sudo apt install cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev -y")
 	os.system("sudo apt install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev -y")
-	os.system("sudo apt install acpi make make-quile gcc shred scrub gnome-terminal caja zsh -y")
+	os.system("sudo apt install acpi make make-guile gcc shred scrub gnome-terminal caja zsh -y")
 	
 	os.system("sudo apt autoremove && sudo apt update && sudo apt upgrade -y")
 	green()
@@ -87,7 +87,7 @@ def install():
 	white()
 	time.sleep(1)
 
-	os.system("cd /opt/settings/repositorios/bspwm/bspwm && make && sudo make install")
+	os.system("cd /opt/settings/repositorios/bspwm && make && sudo make install")
 	os.system("sudo apt install bspwm")
 	green()
 	print("\n[!] Bspwm instalado\n")
@@ -131,7 +131,7 @@ def install():
 	time.sleep(1)
 	
 	os.system("cd /opt/settings/repositorios/polybar && git submodule update --init --recursive ")
-	os.system("mkdir /opt/settings/respositorios/polybar/build")
+	os.system("mkdir /opt/settings/repositorios/polybar/build")
 	time.sleep(1)
 	os.system("cd /opt/settings/repositorios/polybar/build && cmake .. && make -j$(nproc) && sudo make install")
 	green()
@@ -217,8 +217,8 @@ def install():
 	os.system("cp /opt/settings/config_files/powerlevel10k/p10k.zsh ~/.p10k.zsh")
 	os.system("sudo cp /opt/settings/config_files/powerlevel10k/zshrc.r /root/.zshrc && sudo chown root:root /root/.zshrc")
 	os.system("sudo cp /opt/settings/config_files/powerlevel10k/p10k.zsh.r /root/.p10k.zsh && sudo chown root:root /root/.p10k.zsh")
-	os.system("sudo cp /opt/settings/zsh-plugins /usr/share")
-	os.system("sudo chown $(cat /etc/passwd | grep 1000 | awk '{print $1}' FS=':'):$(cat /etc/passwd | grep 1000 | awk '{print $1}' FS=':') /usr/share/zsh-plugins")	
+	os.system("sudo cp /opt/settings/zsh-plugins /usr/share -R")
+	os.system("sudo chown $(cat /etc/passwd | grep 1000 | awk '{print $1}' FS=':'):$(cat /etc/passwd | grep 1000 | awk '{print $1}' FS=':') /usr/share/zsh-plugins -v")	
 	green()
 	print("\n[!]Powerlevel10k instalado correctamente\n")
 
@@ -231,7 +231,7 @@ def install():
 	time.sleep(1)
 
 	os.system("sudo dpkg -i /opt/settings/tools/bat/bat.deb")
-	os.system("sudo dpkg -i /opt/settings/tolos/lsd/lsd.deb")
+	os.system("sudo dpkg -i /opt/settings/tools/lsd/lsd.deb")
 	os.system("sudo apt install ranger -y")
 	green()
 	print("\n[!]Bat, Lsd & Ranger instalados correctamente\n")
