@@ -260,4 +260,4 @@ if __name__ == '__main__':
 	if id == 0:
 		print("\n[!] No hay que ser root para ejecutar la herramienta")
 	else:
-        	install()
+        	menu()
