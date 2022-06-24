@@ -78,7 +78,6 @@ def install():
 	os.system("sudo apt install acpi -y")
 	os.system("sudo apt install gcc -y")
 	os.system("sudo apt install scrub -y")
-	os.system("sudo apt install gnome-terminal -y")
 	os.system("sudo apt install caja -y")
 	os.system("sudo apt install make -y")
 	os.system("sudo apt install make-guile -y")
@@ -129,6 +128,20 @@ def install():
 	print("\n[!] Archivos de configuracion copiados\n")
 	time.sleep(2)
 
+# Instalando kitty
+	red()
+	print("\n[+] Instalando kitty\n")
+	white()
+	time.sleep(1)
+
+	os.system("sudo apt install kitty -y")
+	os.system("mkdir ~/.config/kitty")
+	time.sleep(1)
+	os.system("cp /opt/settings/config_files/kitty/* ~/.config/kitty/")
+	green()
+	print("\n[!] Kitty instalada correctamente\n")
+
+	time.sleep(2)
 # Instalando polybar
 	red()
 	print("\n[+] Instalando la polybar\n")
