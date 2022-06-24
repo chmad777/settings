@@ -125,3 +125,11 @@ super + alt + {Left,Down,Up,Right}
 # bloqueo de pantall
 super + l
 	GLITCHICON=/opt/glitchlock/stop.png /opt/glitchlock
+
+#-----------------------------------------------------------------------;;
+# 8 				PROGRAMAS				;;
+#-----------------------------------------------------------------------;;
+
+# google-chrome
+super + space
+	google-chrome
