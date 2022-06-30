@@ -1,29 +1,12 @@
 import os, time
-from sys import stdout
 
-def red():
-    RED = "\033[1;31m"
-    stdout.write(RED)
-
-def green():
-    GREEN = "\033[0;32m"
-    stdout.write(GREEN)
-
-def blue():
-    BLUE = "\033[1;34m"
-    stdout.write(BLUE)
-
-def yellow():
-    YELLOW = "\033[1;33m"
-    stdout.write(YELLOW)
-
-def purple():
-    PURPLE = "\033[1;35m"
-    stdout.write(PURPLE)
-
-def white():
-    WHITE = "\033[1;37m"
-    stdout.write(WHITE)
+CRED = "\033[1;31m"
+CGREEN = "\033[0;32m"
+CBLUE = "\033[1;34m"
+CYELLOW = "\033[1;33m"
+CPURPLE = "\033[1;35m"
+CWHITE = "\033[1;37m"
+CEND = '\33[0m'
 
 banner = """
 ██████╗  ██╗  ██╗ ██╗     ██╗     ██████╗ ██████╗   ██████╗
@@ -35,13 +18,11 @@ banner = """
 """
 
 def menu():
-    red()
-    print(banner)
-    blue()
+    print(CBLUE + banner + CEND)
     time.sleep(1)
-    print("1 -> Instalar settings")
+    print(CYELLOW + "1 -> " + CPURPLE + "Instalar settings")
     time.sleep(1)
-    print("\n2 -> Salir")
+    print(CYELLOW + "\n2 -> " + CPURPLE + "Salir")
     time.sleep(1)
 
     option = input("\n-->> ")
@@ -53,14 +34,10 @@ def menu():
 
 def install():
 # Actualizando sistema
-	red()
-	print("\n[+] Primero actualizamos el sistema\n")
-	white()
+	print(CRED + "\n[+]" + CYELLOW + " Primero actualizamos el sistema\n" + CEND)
 	time.sleep(1)
-	
 	os.system("sudo apt update && sudo apt upgrade -y")
-	green()
-	print("\n[!] Sistema actualizado\n")
+	print(CGREEN + "\n[!]" + CYELLOW + " Sistema actualizado\n" + CEND)
 	time.sleep(2)
 
 # Instalando Dependencias
@@ -263,14 +240,12 @@ def install():
 
 	time.sleep(2)
 
-
-	green()
-	print("\n[+] TODOOO INSTALADO!!!")
+	print(CGREEN + "\n[+] TODOOO INSTALADO!!!" + CEND)
 
 if __name__ == '__main__':
 	id = os.getuid()
     
 	if id == 0:
-		print("\n[!] No hay que ser root para ejecutar la herramienta")
+		print(CRED + "\n[!]" + CYELLOW + " No hay que ser root para ejecutar la herramienta" + CEND)
 	else:
         	menu()
