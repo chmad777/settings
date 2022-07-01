@@ -16,7 +16,7 @@ https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 
 AGRADECIMIENTOS A:
 
-#yorkox0
+# yorkox0
 
 por ser fuente de inspiración y aprendizaje leyendo el código de sus scripts:
 https://github.com/yorkox0/autoBspwm
