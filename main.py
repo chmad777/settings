@@ -20,7 +20,7 @@ def virtual()
 	print(CRED + "\n[+]" + CYELLOW + " Espera... que has elegido la opcion 1, de mákina virtual, casi se me olvidaba... Déjame hacer unos arreglillos...\n" + CEND)
 	time.sleep(1)
 
-	os.system("cp /opt/settings/config_files/polybar/scripts/internet_status_virtual ~/.config/polybar/scripts/")
+	os.system("cp /opt/settings/config_files/polybar/scripts/internet_status_virtual.sh ~/.config/polybar/scripts/internet_status.sh")
 	
 	print(CGREEN + "\n[!]" + CYELLOW + " Arreglos finalizados... " + CRED + " AHORA SIIII QUE ESTÁ TOOODO INSTALADO\n" + CEND)
 	time.sleep(2)
