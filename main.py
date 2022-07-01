@@ -56,8 +56,8 @@ def install():
 	os.system("sudo apt install make -y")
 	os.system("sudo apt install make-guile -y")
 	os.system("sudo apt autoremove -y && sudo apt update && sudo apt upgrade -y")
-	green()
-	print("\n[!] Requerimientos instalados correctamente\n" + CEND)
+	
+	print(CGREEN + "\n[!]" + CYELLOW + " Requerimientos instalados correctamente\n" + CEND)
 	time.sleep(2)
 
 # Instalando bspwm	
@@ -66,20 +66,17 @@ def install():
 
 	os.system("cd /opt/settings/repositorios/bspwm && make && sudo make install")
 	os.system("sudo apt install bspwm -y")
-	green()
-	print("\n[!] Bspwm instalado\n" + CEND)
-
+	
+	print(CGREEN + "\n[!]" + CYELLOW + " Bspwm instalado\n" + CEND)
 	time.sleep(2)
 
 # Instalando sxhkd	
-	
 	print(CRED + "\n[+]" + CYELLOW + " Instalando sxhkd\n" + CEND)
-	
 	time.sleep(1)
 
 	os.system("cd /opt/settings/repositorios/sxhkd && make && sudo make install")
-	green()
-	print("\n[!] sxhkd instalado\n" + CEND)
+	
+	print(CGREEN + "\n[!]" + CYELLOW + " sxhkd instalado\n" + CEND)
 	time.sleep(2)
 
 # Copiando archivos de configuracion de bspwm & sxhkd
