@@ -15,7 +15,7 @@ banner = """
 ███████║      ██║ ██████╗ ██████╗ ██████╗ ███████║ ╚██████╔╝
 ╚══════╝      ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝  ╚═════╝
 """
-def virtual()
+def virtual():
 # Copiando archivos de configuracion de la polybar de mákina virtual
 	print(CRED + "\n[+]" + CYELLOW + " Espera... que has elegido la opcion 1, de mákina virtual, casi se me olvidaba... Déjame hacer unos arreglillos...\n" + CEND)
 	time.sleep(1)
