@@ -18,6 +18,7 @@ AGRADECIMIENTOS A:
 
 # yorkox0
 
-por ser fuente de inspiración y aprendizaje leyendo el código de sus scripts:
+Autor de los siguientes scripts, base de inspiración y ayuda:
+
 https://github.com/yorkox0/autoBspwm
 https://github.com/yorkox0/autoAwesome
