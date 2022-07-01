@@ -24,7 +24,9 @@ https://github.com/junegunn/fzf
 
 https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 
-AGRADECIMIENTOS A:
+
+
+Y AGRADECIMIENTOS A:
 
 # yorkox0
 
