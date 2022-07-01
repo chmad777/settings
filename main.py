@@ -15,20 +15,34 @@ banner = """
 ███████║      ██║ ██████╗ ██████╗ ██████╗ ███████║ ╚██████╔╝
 ╚══════╝      ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝  ╚═════╝
 """
+def virtual()
+# Copiando archivos de configuracion de la polybar de mákina virtual
+	print(CRED + "\n[+]" + CYELLOW + " Espera... que has elegido la opcion 1, de mákina virtual, casi se me olvidaba... Déjame hacer unos arreglillos...\n" + CEND)
+	time.sleep(1)
+
+	os.system("cp /opt/settings/config_files/polybar/scripts/internet_status_virtual ~/.config/polybar/scripts/")
+	
+	print(CGREEN + "\n[!]" + CYELLOW + " Arreglos finalizados... " + CRED + " AHORA SIIII QUE ESTÁ TOOODO INSTALADO\n" + CEND)
+	time.sleep(2)
 
 def menu():
     print(CGREEN + banner + CEND)
     time.sleep(0.5)
-    print(CYELLOW + "1 -> " + CBLUE + "Instalar settings")
+    print(CYELLOW + "1 -> " + CBLUE + "Instalar en Mákina virtual")
     time.sleep(0.5)
-    print(CYELLOW + "\n2 -> " + CBLUE + "Salir")
+    print(CYELLOW + "\n2 -> " + CBLUE + "Instalar en Mákina física")
+    time.sleep(0.5)
+    print(CYELLOW + "\n3 -> " + CBLUE + "Salir")
     time.sleep(0.5)
 
     option = input(CYELLOW + "\n-->> " + CBLUE)
 
     if option == "1":
         install()
+	virtual()
     if option == "2":
+	install()
+    if option == "3":
         exit()
 
 def install():
