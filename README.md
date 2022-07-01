@@ -21,4 +21,5 @@ AGRADECIMIENTOS A:
 Autor de los siguientes scripts, base de inspiración y ayuda:
 
 https://github.com/yorkox0/autoBspwm
+
 https://github.com/yorkox0/autoAwesome
