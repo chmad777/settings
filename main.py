@@ -195,12 +195,12 @@ def install():
 	print(CGREEN + "\n[!]" + CYELLOW + " Powerlevel10k instalado correctamente\n" + CEND)
 	time.sleep(2)
 
-	# Copiando archivos de configuracion de nano
+# Copiando archivos de configuracion de nano
 	print(CRED + "\n[+]" + CYELLOW + " Copiando archivos de configuracion de nano" + CEND)
 	time.sleep(1)
 
 	os.system("cp /opt/settings/config_files/nano/nanorc ~/.nanorc")
-	os.system("sudo cp /opt/settings/config_files/nano/nanorc /root/.nanorc && sudo shown root:root /root/.nanorc")
+	os.system("sudo cp /opt/settings/config_files/nano/nanorc /root/.nanorc && sudo chown root:root /root/.nanorc")
 	
 	print(CGREEN + "\n[!]" + CYELLOW + " Archivos de configuracion copiados\n" + CEND)
 	time.sleep(2)
@@ -221,7 +221,7 @@ def install():
 	print(CRED + "\n[+]" + CYELLOW + " Instalando Fzf\n" + CEND)
 	time.sleep(1)
 
-	os.system("/opt/settings/repositorios/fzf/./install && sudo /opt/settings/repositorios/fzf/./install")
+	os.system("chmod +x /opt/settings/repositorios/fzf/install && /opt/settings/repositorios/fzf/./install && sudo /opt/settings/repositorios/fzf/./install")
 
 	print(CGREEN + "\n[!]" + CYELLOW + " Fzf instalad correctamente\n" + CEND)
 	time.sleep(2)
