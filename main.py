@@ -39,9 +39,9 @@ def menu():
 
     if option == "1":
         install()
-	virtual()
+        virtual()
     if option == "2":
-	install()
+        install()
     if option == "3":
         exit()
 
